@@ -15,7 +15,7 @@ if (NOT DEFINED XSD_PROG)
 endif()
 
 ADD_CUSTOM_COMMAND(
-    OUTPUT Component.cxx
+    OUTPUT Component.cxx Component.hxx
     COMMAND ${XSD_PROG} cxx-tree --namespace-map =component::xml ${XSD_SOURCE}
     DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/../../library/components/Component.xsd
     WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
